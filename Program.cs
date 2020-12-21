@@ -11,7 +11,7 @@ namespace LabWork
         public static string file;
         static void Main(string[] args)
         {
-            file = @"C:\Users\diego\OneDrive\Desktop\INTEC\Programacion2\TareaLab\Datos.csv";
+            file = args[0];
             var newFile = !(File.Exists(file));
             if (newFile)
             {
