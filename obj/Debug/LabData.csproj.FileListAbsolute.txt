@@ -1,0 +1,10 @@
+C:\Users\diego\OneDrive\Desktop\INTEC\Programacion2\TareaLab\LabData\LabData\obj\Debug\LabData.csprojAssemblyReference.cache
+C:\Users\diego\OneDrive\Desktop\INTEC\Programacion2\TareaLab\LabData\LabData\obj\Debug\LabData.csproj.CoreCompileInputs.cache
+C:\Users\diego\OneDrive\Desktop\INTEC\Programacion2\TareaLab\LabData\LabData\bin\Debug\LabData.exe.config
+C:\Users\diego\OneDrive\Desktop\INTEC\Programacion2\TareaLab\LabData\LabData\bin\Debug\LabData.exe
+C:\Users\diego\OneDrive\Desktop\INTEC\Programacion2\TareaLab\LabData\LabData\bin\Debug\LabData.pdb
+C:\Users\diego\OneDrive\Desktop\INTEC\Programacion2\TareaLab\LabData\LabData\bin\Debug\System.ValueTuple.dll
+C:\Users\diego\OneDrive\Desktop\INTEC\Programacion2\TareaLab\LabData\LabData\bin\Debug\System.ValueTuple.xml
+C:\Users\diego\OneDrive\Desktop\INTEC\Programacion2\TareaLab\LabData\LabData\obj\Debug\LabData.csproj.CopyComplete
+C:\Users\diego\OneDrive\Desktop\INTEC\Programacion2\TareaLab\LabData\LabData\obj\Debug\LabData.exe
+C:\Users\diego\OneDrive\Desktop\INTEC\Programacion2\TareaLab\LabData\LabData\obj\Debug\LabData.pdb
