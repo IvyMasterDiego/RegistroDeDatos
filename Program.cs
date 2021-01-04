@@ -1,4 +1,4 @@
-﻿using OOP;
+using OOP;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -11,12 +11,12 @@ namespace LabWork
         public static string file;
         static void Main(string[] args)
         {
-            file = args[0];
+            file = @"C:\Users\diego\OneDrive\Desktop\INTEC\Programacion2\TareaLab\Datos.csv";
             var newFile = !(File.Exists(file));
             if (newFile)
             {
                 File.Create(file).Close();
-                File.WriteAllText(file, "Cedula,Nombre,Edad,Ahorros,Contraseña");
+                File.WriteAllText(file, "Cedula,Nombre,Edad,Ahorros,Genero,Estado Civil,Grado Academico,Contraseña");
                 Console.WriteLine("Archivo Creado Exitosamente");
             }
             else
@@ -44,7 +44,7 @@ namespace LabWork
             var id = "";
             if (newFile)
             {
-                Console.Write("Cedula");
+                Console.Write("Cedula: ");
                 id = OnlyInt();
             }
             else
@@ -52,7 +52,7 @@ namespace LabWork
             Console.Write("Nombre: ");
             var name = Console.ReadLine();
         ageInput:
-            Console.Write("Edad");
+            Console.Write("Edad: ");
             int age = int.Parse(Console.ReadLine());
             if (!(age >= 7 && age <= 120))
                 goto ageInput;
@@ -66,7 +66,62 @@ namespace LabWork
             }
             Console.Write("Ahorros: ");
             var ahorros = DoubleOnly();
-            return $"{id},{name},{age},{ahorros},{password}";
+        generoinput:
+            Console.Write("Sexo M|F");
+            int genero;
+            switch (Console.ReadLine().ToUpper())
+            {
+                case "M":
+                    genero = 0;
+                    break;
+                case "F":
+                    genero = 8;
+                    break;
+                default:
+                    goto generoinput;
+            }
+        estadoinput:
+            Console.Write("Estado Civil C|S: ");
+            int estado;
+            switch (Console.ReadLine().ToUpper())
+            {
+                case "C":
+                    estado = 4;
+                    break;
+                case "S":
+                    estado = 0;
+                    break;
+                default:
+                    goto estadoinput;
+            }
+
+        gradoinput:
+            Console.WriteLine("Grado Academico:");
+            Console.WriteLine("Inicial(I)");
+            Console.WriteLine("Bachillerato(B)");
+            Console.WriteLine("Grado(G)");
+            Console.WriteLine("PostGrado(P)");
+            Console.Write("Opcion: ");
+            int grade;
+            switch (Console.ReadLine().ToUpper())
+            {
+                case "I":
+                    grade = 0;
+                    break;
+                case "B":
+                    grade = 1;
+                    break;
+                case "G":
+                    grade = 2;
+                    break;
+                case "P":
+                    grade = 3;
+                    break;
+                default:
+                    goto gradoinput;
+            }
+
+            return $"{id}, {name}, {age}, {ahorros}, {genero}, {estado}, {grade}, {password}";
         }
         private static string OnlyInt()
         {
@@ -150,7 +205,6 @@ namespace LabWork
         {
             string doubleValue = "";
             int pointCount = 0;
-            int decimalC = 0;
             ConsoleKeyInfo key = Console.ReadKey(true);
             while (key.Key != ConsoleKey.Enter)
             {
@@ -261,7 +315,7 @@ namespace LabWork
         }
         public static void DataMenu(string record)
         {
-            Console.WriteLine("Save (S), Reload (R), Exit(E)");
+            Console.WriteLine("Save (S), Reload (R), Exit(E) ");
             var resp = Console.ReadLine();
             switch (resp.ToUpper())
             {
@@ -364,7 +418,7 @@ namespace LabWork
         }
         public static void ModMenu(Person person)
         {
-            Console.WriteLine("Modificar (M), Reintentar (R), Exit (E)");
+            Console.WriteLine("Modificar (M), Reintentar (R), Exit (E) ");
             var answer = Console.ReadLine();
             switch (answer.ToUpper())
             {
@@ -386,7 +440,7 @@ namespace LabWork
 
             if (resp == null)
             {
-                Console.WriteLine("No se encontro el registro. Desea continuar? Y/N");
+                Console.WriteLine("No se encontro el registro. Desea continuar? Y/N ");
                 var answer = Console.ReadLine();
                 switch (answer.ToUpper())
                 {
